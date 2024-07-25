@@ -1,0 +1,44 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <h4 id="post-name" style="margin:10px; display:inline-block;">All Posts:</h4><h4 id="post-first" style="display:inline-block;"></h4>
+    <h5 id="message"></h5>
+
+    <div id="posts-buttons">
+        <div id="followNos">
+        </div>
+        {% if user.is_authenticated %}
+        <div id="follow-buttons">
+        </div>
+        {% endif %}
+    </div>
+
+    <div id="new-post" class="newpost">
+        {% if user.is_authenticated %}
+        <form id="post-form" action="posts" name="form" method="POST">
+            {% csrf_token %}
+            <script>
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            </script>
+            <h6>New Post</h6>
+            <textarea class="form-control" id="post-body" required name="content" placeholder="post contents"></textarea>
+            <input id="submit" type="submit" class="btn-sm btn-primary" value="Post"/>
+        </form>
+        {% endif %}
+    </div>
+
+    <div class="list" id="posts-list">
+        {% if user.is_authenticated %}
+        <button class="edit" id="edit"></button>
+        {% endif%}
+    </div>
+    <div class="pagenumbers" id="pagination">
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/inbox.js' %}"></script>
+{% endblock %}

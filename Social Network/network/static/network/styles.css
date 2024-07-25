@@ -1,0 +1,76 @@
+body {
+    margin: 10px;
+    padding: 20px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+h5 {
+    color: red;
+}
+
+#post-form {
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid green;
+}
+
+.followNums {
+    margin: 10px;
+    display: inline-block;
+}
+
+.pbox {
+    border: 1px solidgrey;
+    border-style: ridge;
+    padding: 4px;
+    margin: 10px;
+}
+
+.edit {
+    border: none;
+    color: blue;
+    background-color: white;
+}
+
+.likes, .unlikes, .follow, .unfollow {
+    border: 1px solid blue;
+    color: blue;
+    background-color: white;
+}
+
+.likes:hover, .unlikes:hover, .follow:hover, .unfollow:hover {
+    background-color: #0066ff;
+    color: white;
+}
+
+.pagenumbers {
+    display: flex;
+    justify-content: center;
+}
+
+.pagenumbers button {
+    width: 100px;
+    height: 50px;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #44AAEE;
+    margin: 5px;
+    transition: 0.4s;
+    color: #FFF;
+    font-size: 18px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagenumbers button:hover {
+    background-color: #44EEAA;
+}
+
+
+
+
